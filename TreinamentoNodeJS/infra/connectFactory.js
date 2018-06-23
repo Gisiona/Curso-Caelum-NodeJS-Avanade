@@ -1,7 +1,7 @@
 const mysql = require('mysql')
 require('dotenv').config()
 
-function getConnectionFactory() {
+function connectionFactory() {
   const connection = mysql.createConnection({
     /*
     user: 'root',
@@ -20,7 +20,7 @@ function getConnectionFactory() {
  return connection
 }
 
-module.exports = () => getConnectionFactory
+module.exports = () => connectionFactory
 // module.exports = function() {
 //  return connectionFactory
 // }
